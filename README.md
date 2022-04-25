@@ -14,9 +14,16 @@ config.xml的conns是连接数, 想填多少填多少
 nc端模拟http报文: GET /HTTP/1.1
 
 二. main函数解释
-tinyxml这个库, 用它来解析咱们的xml文件会方便许多
 将processpool的构造函数设置为私有,然后通过一个静态的方法去调用这个构造函数从而实现了一个单例模式,
 也就是说无论用户用这个类去构造多少个对象,这些对象都是同一个，保证了任务只能由一个对象去实现.
 
 
 三. Processpool
+
+四. 代码的用法
+在Linux直接 ./springsnail -f config.xml 。 然后可以使用 nc local host port 进行连接。
+
+五. 参考资料
+https://blog.csdn.net/Q755100802/article/details/104559974
+https://blog.csdn.net/Sanjiye/article/details/81334358
+https://blog.csdn.net/westbrookliu/article/details/82695722
